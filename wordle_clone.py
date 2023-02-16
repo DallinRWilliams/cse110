@@ -1,3 +1,10 @@
+"""
+File: wordle_clone.py
+Author: Dallin Williams
+
+Purpose: A word-guessing game that records user input and outputs correct letters and placements.
+"""
+
 from rich.prompt import Prompt
 from rich.console import Console
 from random import choice
@@ -5,22 +12,19 @@ from words import word_list
 
 squares = {'correct_place': '🟩', 'correct_letter': '🟨', 'incorrect_letter': '⬛'}
 
-welcome = f'\n[white on blue] WELCOME TO WORDLE [/]\n'
-instructions = "You have 6 guesses to guess the 5-letter word correctly.\nCorrect letters are highlighted in yellow, green if they are in the right place, or not at all if they're incorrect."
+welcome = f"\n[white on blue] WELCOME TO WORDLE [/]\n"
+instructions = "You have 6 guesses to guess the 5-letter word correctly.\nCorrect letters are highlighted in yellow, green if they are in the right place, or not at all if they're incorrect.\n"
 guess_statement = "Enter your guess"
 allowed_guesses = 6
 
 def correct_place(letter):
     return f'[black on green]{letter}[/]'
 
-
 def correct_letter(letter):
     return f'[black on yellow]{letter}[/]'
 
-
 def incorrect_letter(letter):
     return f'[black on white]{letter}[/]'
-
 
 def check_guess(guess, answer):
     guessed = []
@@ -36,7 +40,6 @@ def check_guess(guess, answer):
             guessed += incorrect_letter(letter)
             wordle_pattern.append(squares['incorrect_letter'])
     return ''.join(guessed), ''.join(wordle_pattern)
-
 
 def game(console, chosen_word):
     end_of_game = False
@@ -56,7 +59,6 @@ def game(console, chosen_word):
         guessed, pattern = check_guess(guess, chosen_word)
         all_words_guessed.append(guessed)
         full_wordle_pattern.append(pattern)
-
         console.print(*all_words_guessed, sep="\n")
         if guess == chosen_word or len(already_guessed) == allowed_guesses:
             end_of_game = True
@@ -66,7 +68,6 @@ def game(console, chosen_word):
     else:
         console.print(f"\n[green]WORDLE {len(already_guessed)}/{allowed_guesses}[/]\n")
     console.print(*full_wordle_pattern, sep="\n")
-
 
 if __name__ == '__main__':
     console = Console()
