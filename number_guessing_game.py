@@ -15,7 +15,7 @@ print("Ready? Let's play!\n")
 playing = "yes"
 
 while playing == "yes":
-    number = random.randint(1, 100)
+    number = random.randint(0, 100)
 
     guesses = 0
 
