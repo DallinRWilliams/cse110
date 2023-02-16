@@ -17,20 +17,20 @@ playing = "yes"
 while playing == "yes":
     number = random.randint(0, 100)
 
-    guesses = 0
+    guess_counter = 0
 
-    guess = -1
+    guess = 0
 
     while guess != number:
         guess = int(input("What is your guess? "))
-        guesses = guesses + 1
+        guess_counter += 1
 
         if guess < number:
             print("Guess higher!")
         elif guess > number:
             print("Guess lower!")
         else:
-            print(f"You guessed it! It took you {guesses} guesses.")
+            print(f"You guessed it! It took you {guess_counter} guesses.")
 
     playing = input("Play again? (yes/no) ")
 
