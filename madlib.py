@@ -1,5 +1,5 @@
 """
-File: word_game.py
+File: madlib.py
 Author: Dallin Williams
 
 Purpose: execute a mad-lib style word game with user input.

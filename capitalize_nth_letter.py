@@ -1,11 +1,11 @@
 """
-File: capitalize_nth_number.py
+File: capitalize_nth_letter.py
 Author: Dallin Williams
 
-Purpose: Capitalizes every nth number, defined by user.
+Purpose: Capitalizes every nth number, as defined by user.
 """
 
-quote = "In coming days, it will not be possible to survive spiritually without the guiding, directing, comforting, and constant influence of the Holy Ghost."
+quote = "In coming days it will not be possible to survive spiritually without the guiding directing comforting and constant influence of the Holy Ghost.\n"
 
 playing = "yes"
 
