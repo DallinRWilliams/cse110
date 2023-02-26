@@ -5,7 +5,7 @@ Author: Dallin Williams
 Purpose: Capitalizes every nth number, as defined by user.
 """
 
-quote = "In coming days it will not be possible to survive spiritually without the guiding directing comforting and constant influence of the Holy Ghost.\n"
+quote = "in coming days it will not be possible to survive spiritually without the guiding directing comforting and constant influence of the Holy Ghost.\n"
 
 playing = "yes"
 
