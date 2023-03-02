@@ -41,11 +41,11 @@ print()
 print(f"The largest number is: {largest}")
 
 for number in numbers:
-    if number < smallest:
+    if number > 0 and number < smallest:
         smallest = number
 
 print()
-print(f"The smallest number is: {smallest}")
+print(f"The smallest is: {smallest}")
 
 sorted = sorted(numbers)
 
