@@ -2,7 +2,7 @@
 File: sort_list_numbers.py
 Author: Dallin Williams
 
-Purpose: Put numbers in lists and sort them.
+Purpose: Put numbers in lists and sort them. Find sum, average, smallest number, and largest number.
 """
 
 print()
@@ -10,6 +10,9 @@ print("Enter a list of numbers.\nType 0 when finished.")
 
 numbers = []
 number = -1
+sum = 0
+largest = -1
+smallest = 99999999999
 
 while number != 0:
     print()
@@ -17,8 +20,6 @@ while number != 0:
 
     if number != 0:
         numbers.append(number)
-
-sum = 0
 
 for number in numbers:
     sum += number
@@ -32,8 +33,6 @@ average = sum / count
 print()
 print(f"The average is: {average}")
 
-best = -1
-
 for number in numbers:
     if number > largest:
         largest = number
@@ -41,14 +40,12 @@ for number in numbers:
 print()
 print(f"The largest number is: {largest}")
 
-smallest = 99999999999
-
 for number in numbers:
-    if number > 0 and number < smallest:
+    if number < smallest:
         smallest = number
 
 print()
-print(f"The smallest positive number is: {smallest}")
+print(f"The smallest number is: {smallest}")
 
 sorted = sorted(numbers)
 
