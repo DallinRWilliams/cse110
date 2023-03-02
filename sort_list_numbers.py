@@ -45,7 +45,7 @@ for number in numbers:
         smallest = number
 
 print()
-print(f"The smallest is: {smallest}")
+print(f"The smallest positive number is: {smallest}")
 
 sorted = sorted(numbers)
 
