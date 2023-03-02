@@ -35,11 +35,11 @@ print(f"The average is: {average}")
 best = -1
 
 for number in numbers:
-    if number > best:
-        best = number
+    if number > largest:
+        largest = number
 
 print()
-print(f"The largest number is: {best}")
+print(f"The largest number is: {largest}")
 
 smallest = 99999999999
 
