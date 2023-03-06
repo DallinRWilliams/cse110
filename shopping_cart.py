@@ -14,7 +14,7 @@ user_input_menu = 0
 user_input_item = ""
 user_input_number = 0
 
-while user_input_menu != 6:
+while user_input_menu != 6:  # quit program on input == 6
 
     print()
     print("Welcome to the Shopping Cart Program!\n")
@@ -33,7 +33,7 @@ while user_input_menu != 6:
         user_input_item = input("What item would you like to add?: ")
         user_input_number = float(input(f"What is the price of '{user_input_item}'?: $"))
 
-        items.append(user_input_item)
+        items.append(user_input_item)  # .append() adds item to the end of the list
         prices.append(user_input_number)
         print(f"'{user_input_item}' has been added to the cart!")
     
@@ -45,7 +45,7 @@ while user_input_menu != 6:
         else:
             print("\nYour Cart:\n ")
 
-            for index in range(len(items)) and range(len(prices)):
+            for index in range(len(items)) and range(len(prices)):  # counts items, matches items with prices, and displays them in list format
                 item = items[index]
                 price = prices[index]
 
@@ -53,26 +53,27 @@ while user_input_menu != 6:
         
     elif user_input_menu == 3:
         user_input_number == int(input("Which item would you like to remove?: "))
-        items.pop(user_input_number - 1)
+
+        items.pop(user_input_number - 1)  # .pop() removes item from the list
         prices.pop(user_input_number - 1)
 
         print("Item Removed.")
     
     elif user_input_menu == 4:
         for number in prices:
-            total_price += number
+            total_price += number  # sums the prices list
         
         print(f"Your total is: ${total_price:.2f}")
 
     elif user_input_menu == 5:
-        for number in range(len(items)):
+        for number in range(len(items)):  # counts how many objects in items list
             total_item = number
         
         if total_item == 0 and items == [] and prices == []:
             print("The cart is empty.")
         
         else:
-            print(f"There are {total_item + 1} items in the cart. ")
+            print(f"There are {total_item + 1} items in the cart. ")  # +1 because list indexes at 0
 
 print("\nThank you for shopping with us!\n")
 print("Goodbye!\n")
