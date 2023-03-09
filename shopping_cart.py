@@ -27,6 +27,7 @@ while user_input_menu != 5:  # quit program on input == 6
     4. Compute total
     5. Quit\n
     """)
+    
     user_input_menu = int(input("Please enter an action: "))
 
     if user_input_menu == 1:
