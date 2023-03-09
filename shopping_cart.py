@@ -14,7 +14,7 @@ user_input_menu = 0
 user_input_item = ""
 user_input_number = 0
 
-while user_input_menu != 6:  # quit program on input == 6
+while user_input_menu != 5:  # quit program on input == 6
 
     print()
     print("Welcome to the Shopping Cart Program!\n")
@@ -31,10 +31,10 @@ while user_input_menu != 6:  # quit program on input == 6
 
     if user_input_menu == 1:
         user_input_item = input("What item would you like to add?: ")
-        user_input_number = float(input(f"What is the price of '{user_input_item}'?: $"))
+        user_input_price = float(input(f"What is the price of '{user_input_item}'?: $"))
 
         items.append(user_input_item)  # .append() adds item to the end of the list
-        prices.append(user_input_number)
+        prices.append(user_input_price)
         print(f"'{user_input_item}' has been added to the cart!")
     
     elif user_input_menu == 2:
