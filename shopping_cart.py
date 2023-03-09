@@ -14,7 +14,7 @@ user_input_menu = 0
 user_input_item = ""
 user_input_number = 0
 
-while user_input_menu != 5:  # quit program on input == 6
+while user_input_menu != 5:
 
     print()
     print("Welcome to the Shopping Cart Program!\n")
@@ -27,7 +27,7 @@ while user_input_menu != 5:  # quit program on input == 6
     4. Compute total
     5. Quit\n
     """)
-    
+
     user_input_menu = int(input("Please enter an action: "))
 
     if user_input_menu == 1:
