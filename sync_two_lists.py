@@ -27,8 +27,7 @@ print("\nAccount Information: ")
 for i in range(len(names)):
     print(f"{i + 1}. {names[i]} - ${balances[i]:.2f}")
 
-    total += balances[i]
-
+total += balances[i]
 average = total / len(balances)
 
 print(f"\nTotal: ${total:.2f}")
